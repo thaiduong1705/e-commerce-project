@@ -28,15 +28,15 @@ const productSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "Category",
         },
+        price: {
+            type: Number,
+            required: true,
+        },
         quantity: {
             type: Number,
             default: 0,
         },
         soldQuantity: {
-            type: Number,
-            default: 0,
-        },
-        quantity: {
             type: Number,
             default: 0,
         },

@@ -10,7 +10,7 @@ const { verifyToken, isAdmin } = require("../middlewares/authentication");
 router.use("/auth", authRouter);
 
 // public routes
-router.use("public", publicRouter);
+router.use("/public", publicRouter);
 // private routes
 router.use("/private", verifyToken, privateRouter);
 

@@ -2,11 +2,12 @@ const express = require("express");
 
 const router = express.Router();
 
-const { getOneProduct } = require("../../controllers/product");
+const {
+    getOneProduct,
+    getFilterProduct,
+} = require("../../controllers/product");
 
-router.route("/").get((req, res) => {
-    res.send("get all filter product");
-});
-router.route("/:id").get(getOneProduct);
+router.route("/").get(getFilterProduct);
+router.route("/:pid").get(getOneProduct);
 
 module.exports = router;

@@ -11,7 +11,7 @@ const {
 
 router.route("/").get(getAllProduct).post(createProduct);
 router
-    .route("/:id")
+    .route("/:pid")
     .get(getOneProduct)
     .put(updateProduct)
     .delete(deleteProduct);
